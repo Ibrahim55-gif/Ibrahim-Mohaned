@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Course Hub - Courses</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #007bff, #00c6ff);
+            color: white;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .course {
+            border-bottom: 1px solid #ccc;
+            padding: 15px;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Explore Tech Courses</h1>
+        <p>Master coding, digital literacy, and modern tech skills!</p>
+
+        <div class="course">
+            <h2>Web Development Basics</h2>
+            <p>Learn HTML, CSS, and JavaScript to build interactive websites.</p>
+            <button onclick="alert('Enrolled in Web Development Basics!')">Enroll</button>
+        </div>
+
+        <div class="course">
+            <h2>Python Programming</h2>
+            <p>Start coding with Python, the language of AI and automation.</p>
+            <button onclick="alert('Enrolled in Python Programming!')">Enroll</button>
+        </div>
+
+        <div class="course">
+            <h2>Data Science Essentials</h2>
+            <p>Analyze data and learn the fundamentals of data science.</p>
+            <button onclick="alert('Enrolled in Data Science Essentials!')">Enroll</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
