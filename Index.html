@@ -1,51 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en"> <!-- Added lang="en" attribute here -->
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Course Hub</title>
+    <title>You're Invited! Exclusive Coding Workshop</title>
+    <!-- Tailwind CSS CDN for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter for clean typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Custom styles to complement Tailwind and add specific aesthetics */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Inter', sans-serif; /* Using Inter font for the whole page */
+            background-color: #f0f2f5; /* Light subtle grey background */
+            display: flex; /* Use flexbox for centering content */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            min-height: 100vh; /* Minimum height of viewport for centering */
+            padding: 20px; /* Add some padding around the edges */
+            box-sizing: border-box; /* Include padding in element's total width and height */
+        }
+
+        .invite-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f7f7f7 100%); /* Subtle gradient background */
+            padding: 2.5rem; /* More generous padding */
+            max-width: 700px; /* Max width for readability on larger screens */
+            width: 100%; /* Ensure it takes full width on smaller screens */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Deeper, softer shadow */
+            border-radius: 1.5rem; /* More rounded corners */
             text-align: center;
-            background: linear-gradient(to right, #007bff, #00c6ff);
-            color: white;
-            padding: 20px;
+            border: 1px solid #e0e0e0; /* Light border */
         }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            color: black;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+
+        h1 {
+            color: #2c3e50; /* Dark blue-grey for main title */
+            font-size: 2.5rem; /* Larger title font size */
+            font-weight: 700; /* Bold title */
+            margin-bottom: 0.5rem;
         }
-        button {
-            background-color: #28a745;
+
+        h2 {
+            color: #3498db; /* Vibrant blue for event title */
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 2rem; /* More space below event title */
+        }
+
+        .event-image {
+            width: 100%;
+            max-height: 250px; /* Max height for image */
+            object-fit: cover; /* Ensures image covers area without distortion */
+            border-radius: 1rem; /* Rounded corners for image */
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Image shadow */
+        }
+
+        .event-details p {
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .event-details strong {
+            color: #2c3e50; /* Stronger color for key details */
+        }
+
+        .cta-button {
+            background-color: #2ecc71; /* Green button */
             color: white;
-            padding: 10px 20px;
+            padding: 0.8rem 2rem; /* Generous padding */
             border: none;
-            border-radius: 5px;
+            border-radius: 0.75rem; /* Rounded button corners */
             cursor: pointer;
-            font-size: 16px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Button shadow */
+            margin-top: 1.5rem; /* Space above the button */
         }
-        button:hover {
-            background-color: #218838;
+
+        .cta-button:hover {
+            background-color: #27ae60; /* Darker green on hover */
+            transform: translateY(-2px); /* Slight lift on hover */
+        }
+
+        #rsvpConfirmation {
+            margin-top: 1rem;
+            font-weight: 600;
+            color: #27ae60; /* Green for success message */
+            font-size: 1.1rem;
+            opacity: 0; /* Hidden by default */
+            transition: opacity 0.3s ease-in-out; /* Smooth fade-in */
+        }
+
+        .guest-list {
+            margin-top: 2.5rem;
+            text-align: left; /* Align guest list to the left */
+            max-width: 300px; /* Limit width of guest list */
+            margin-left: auto; /* Center guest list block */
+            margin-right: auto; /* Center guest list block */
+            background-color: #fcfcfc; /* Slightly different background for list */
+            padding: 1.5rem;
+            border-radius: 1rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            border: 1px solid #eee;
+        }
+
+        .guest-list h3 {
+            font-size: 1.4rem;
+            color: #34495e;
+            margin-bottom: 1rem;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 0.5rem;
+        }
+
+        .guest-list ul {
+            list-style-type: none; /* No bullets */
+            padding: 0;
+        }
+
+        .guest-list li {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 0.5rem;
         }
     </style>
 </head>
-
 <body>
 
-    <div class="container">
-        <h1>Welcome to Tech Course Hub</h1>
-        <p>Your gateway to mastering coding, digital literacy, and tech skills!</p>
+    <div class="invite-card">
+        <h1>You're Invited!</h1>
+        <h2>Exclusive Coding Workshop: Build Your First Web App</h2>
 
-        <button onclick="alert('Start Learning!')">Explore Courses</button>
+        <img src="https://placehold.co/700x250/3498db/ffffff?text=Coding+Workshop+Illustration" 
+             alt="Illustration of coding on a laptop with abstract tech elements" 
+             class="event-image">
+
+        <div class="event-details">
+            <p><strong>Date:</strong> Friday, July 12, 2025</p>
+            <p><strong>Time:</strong> 6:00 PM - 9:00 PM EEST</p>
+            <p><strong>Location:</strong> The Innovation Hub, 123 Tech Avenue, Cairo, Egypt</p>
+            <p><strong>What you'll learn:</strong> Hands-on introduction to HTML, CSS, and basic JavaScript. Build a simple interactive webpage from scratch!</p>
+            <p><strong>Who it's for:</strong> Beginners eager to start their coding journey. No prior experience needed!</p>
+        </div>
+
+        <button id="rsvpButton" class="cta-button">RSVP Now</button>
+        <p id="rsvpConfirmation">Thank you for your RSVP! We look forward to seeing you!</p>
+
+        <div class="guest-list">
+            <h3>Confirmed Guests:</h3>
+            <ul>
+                <li>Ibrahim</li>
+                <li>Alex</li>
+                <li>Sara</li>
+                <li>Fatima</li>
+                <li>Ahmed</li>
+            </ul>
+        </div>
     </div>
 
-</body>
+    <script>
+        // JavaScript for handling the RSVP button click
+        document.getElementById('rsvpButton').addEventListener('click', function() {
+            // Change button text and disable it
+            this.textContent = 'RSVP Confirmed!';
+            this.disabled = true;
+            this.style.backgroundColor = '#27ae60'; /* A slightly darker green for confirmed state */
+            this.style.cursor = 'not-allowed';
 
+            // Show confirmation message
+            const confirmationMessage = document.getElementById('rsvpConfirmation');
+            confirmationMessage.style.opacity = '1'; /* Fade in the message */
+            confirmationMessage.style.transition = 'opacity 0.5s ease-in-out';
+        });
+    </script>
+
+</body>
 </html>
